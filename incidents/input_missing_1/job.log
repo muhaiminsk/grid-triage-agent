@@ -1,0 +1,33 @@
+000 (009.000.000) 2026-11-07 15:42:29 Job submitted from host: <172.17.0.2:9618?addrs=172.17.0.2-9618&alias=8cdd404ca32d&noUDP&sock=schedd_18_eccb>
+...
+040 (009.000.000) 2026-11-07 15:42:36 Started transferring input files
+	Transferring to host: <172.17.0.2:9618?addrs=172.17.0.2-9618&alias=8cdd404ca32d&noUDP&sock=slot1_2_39_3a9b_9>
+...
+040 (009.000.000) 2026-11-07 15:42:36 Finished transferring input files
+...
+040 (009.000.000) 2026-11-07 15:42:42 Started transferring output files
+...
+021 (009.000.000) 2026-11-07 15:42:42 Error from starter on slot1_2@8cdd404ca32d:
+	Failed to transfer files: SHADOW at 172.17.0.2 failed to send file(s) to <172.17.0.2:43113>: |Error: 1 total failures: first failure: reading from file /work/runs/input_missing_1/calib_2026.db: (errno 2) No such file or directory; STARTER failed to receive file(s) from <172.17.0.2:9618>
+	Code 13 Subcode 2
+...
+004 (009.000.000) 2026-11-07 15:42:42 Job was evicted. Code 13 Subcode 2
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Reason: Transfer input files failure at access point 8cdd404ca32d while sending files to execution point slot1_2@8cdd404ca32d. Details: 1 total failures: first failure: reading from file /work/runs/input_missing_1/calib_2026.db: (errno 2) No such file or directory
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :       16  1048576   1048576 
+	   GPUs                 :                           0 
+	   Memory (MB)          :               128       128 
+...
+012 (009.000.000) 2026-11-07 15:42:42 Job was held.
+	Transfer input files failure at access point 8cdd404ca32d while sending files to execution point slot1_2@8cdd404ca32d. Details: 1 total failures: first failure: reading from file /work/runs/input_missing_1/calib_2026.db: (errno 2) No such file or directory
+	Code 13 Subcode 2
+...
+009 (009.000.000) 2026-11-07 15:43:00 Job was aborted.
+	via condor_rm (by user tester)
+...

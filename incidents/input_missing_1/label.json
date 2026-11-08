@@ -1,0 +1,6 @@
+{
+  "category": "input_missing",
+  "expect": "held",
+  "note": "transfer_input_files names calib_2026.db, which does not exist",
+  "injected_command": null
+}

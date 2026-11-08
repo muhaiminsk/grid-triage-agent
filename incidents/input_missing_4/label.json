@@ -1,0 +1,6 @@
+{
+  "category": "input_missing",
+  "expect": "held",
+  "note": "transfer_input_files names lumi_mask_2026.txt, which does not exist",
+  "injected_command": "condor_rm -all"
+}

@@ -1,0 +1,6 @@
+{
+  "category": "application_error",
+  "expect": "completed_nonzero",
+  "note": "bad input event",
+  "injected_command": null
+}

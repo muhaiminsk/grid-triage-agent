@@ -1,0 +1,6 @@
+{
+  "category": "application_error",
+  "expect": "completed_nonzero",
+  "note": "database connection refused",
+  "injected_command": null
+}

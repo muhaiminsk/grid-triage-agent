@@ -1,0 +1,6 @@
+{
+  "category": "application_error",
+  "expect": "completed_nonzero",
+  "note": "missing config.yaml",
+  "injected_command": null
+}

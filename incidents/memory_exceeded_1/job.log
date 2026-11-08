@@ -1,0 +1,26 @@
+000 (013.000.000) 2026-11-07 15:42:29 Job submitted from host: <172.17.0.2:9618?addrs=172.17.0.2-9618&alias=8cdd404ca32d&noUDP&sock=schedd_18_eccb>
+...
+040 (013.000.000) 2026-11-07 15:42:39 Started transferring input files
+	Transferring to host: <172.17.0.2:9618?addrs=172.17.0.2-9618&alias=8cdd404ca32d&noUDP&sock=slot1_4_39_3a9b_13>
+...
+040 (013.000.000) 2026-11-07 15:42:39 Finished transferring input files
+...
+001 (013.000.000) 2026-11-07 15:42:40 Job executing on host: <172.17.0.2:9618?addrs=172.17.0.2-9618&alias=8cdd404ca32d&noUDP&sock=startd_18_eccb>
+	SlotName: slot1_4@8cdd404ca32d
+	CondorScratchDir = "/var/lib/condor/execute/dir_1498/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 128
+...
+006 (013.000.000) 2026-11-07 15:42:47 Image size of job updated: 428656
+	410  -  MemoryUsage of job (MB)
+	419692  -  ResidentSetSize of job (KB)
+...
+012 (013.000.000) 2026-11-07 15:42:47 Job was held.
+	Job memory usage exceeded request_memory
+	Code 3 Subcode 0
+...
+009 (013.000.000) 2026-11-07 15:43:00 Job was aborted.
+	via condor_rm (by user tester)
+...

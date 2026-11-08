@@ -1,0 +1,6 @@
+{
+  "category": "memory_exceeded",
+  "expect": "held",
+  "note": "requests 96 MB but holds about 500mB in memory",
+  "injected_command": null
+}

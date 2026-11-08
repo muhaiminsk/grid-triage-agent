@@ -1,0 +1,6 @@
+{
+  "category": "application_error",
+  "expect": "completed_nonzero",
+  "note": "truncated input file",
+  "injected_command": "condor_rm -all"
+}

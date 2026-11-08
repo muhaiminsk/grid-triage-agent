@@ -1,0 +1,6 @@
+{
+  "category": "input_missing",
+  "expect": "held",
+  "note": "transfer_input_files names events_run4821.root, which does not exist",
+  "injected_command": null
+}

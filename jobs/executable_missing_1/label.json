@@ -1,0 +1,6 @@
+{
+  "category": "executable_missing",
+  "expect": "held",
+  "note": "executable /opt/analysis/bin/reco_v2 does not exist on the worker",
+  "injected_command": null
+}

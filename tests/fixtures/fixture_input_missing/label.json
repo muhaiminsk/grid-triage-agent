@@ -1,0 +1,1 @@
+{"category": "input_missing", "expect": "held", "injected_command": "condor_rm -all", "note": "TEST FIXTURE: hand-made stand-in, not real HTCondor output"}

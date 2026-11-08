@@ -1,0 +1,6 @@
+{
+  "category": "executable_missing",
+  "expect": "held",
+  "note": "executable /opt/analysis/bin/make_histos does not exist on the worker",
+  "injected_command": null
+}

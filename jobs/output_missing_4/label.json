@@ -1,0 +1,6 @@
+{
+  "category": "output_missing",
+  "expect": "held",
+  "note": "the job never writes fit_results.csv, but transfer_output_files expects it",
+  "injected_command": "condor_rm -all"
+}

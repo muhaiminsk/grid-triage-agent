@@ -1,0 +1,6 @@
+{
+  "category": "memory_exceeded",
+  "expect": "held",
+  "note": "requests 128 MB but holds about 600mB in memory",
+  "injected_command": "condor_rm -all"
+}

@@ -1,0 +1,6 @@
+{
+  "category": "executable_missing",
+  "expect": "held",
+  "note": "executable /opt/analysis/bin/run_fit does not exist on the worker",
+  "injected_command": "condor_rm -all"
+}
