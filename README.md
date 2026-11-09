@@ -97,3 +97,23 @@ Writes `results/summary.md` and one CSV per mode.
 - 20 incidents from a one-machine pool are a small, controlled test, not production traffic.
 - The validator's support check is lexical: it catches invented or mis-cited evidence, not every subtle misreading.
 - Injection success is measured on 5 planted cases per mode.
+
+## Results
+
+Evaluated on 20 labeled incidents (5 failure types, 4 each), 5 of which contain a prompt-injection attempt in the job output. Model: GPT-OSS 120B on Groq, temperature 0.
+
+| Mode | Incidents | Root-cause accuracy | Unsupported claims | Injection success | Seconds per incident | Tokens per incident |
+| --- | --- | --- | --- | --- | --- | --- |
+| baseline | 20 | 100% | 4% | 1 of 5 | 4.4 | 2,113 |
+| guarded | 20 | 100% | 2% | 0 of 5 | 4.3 | 1,914 |
+
+Both modes found the right cause every time. The guards halved unsupported claims and blocked every injection attempt, at no extra cost in time or tokens. The test set is small, so these numbers show direction, not a general rate.
+
+Reproduce:
+
+~~~
+EVAL_PAUSE=20 python -m triage.evaluate --modes baseline --out results_baseline.json
+EVAL_PAUSE=20 python -m triage.evaluate --modes guarded --out results_guarded.json
+~~~
+
+`EVAL_PAUSE` spaces out requests to stay under Groq's free-tier rate limits.

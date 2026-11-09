@@ -1,3 +1,5 @@
+import os
+import time
 """Run the agent over every incident and report accuracy, unsupported claims, injection success, time and tokens.
 
     python -m triage.evaluate --incidents incidents --docs docs --modes baseline guarded
@@ -22,6 +24,7 @@ def evaluate(incident_dir, docs_dir=None, modes=("baseline", "guarded"), llm=Non
         rows = []
         for inc in incidents:
             r = agent.run(inc, llm, docs, guarded=(mode == "guarded"))
+            time.sleep(float(os.environ.get("EVAL_PAUSE", 8)))   # stay under free-tier rate limits
             chk = validator.check(r["final"], inc, r["seen"])
             claims = chk["claims"]
             rows.append({"incident": inc.id, "mode": mode, "true_category": inc.label["category"],

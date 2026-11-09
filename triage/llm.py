@@ -81,7 +81,7 @@ class LLM:
         for _ in range(6):
             body = {"model": self.model, "messages": messages, "temperature": 0}
             if self.native_tools:
-                body.update(tools=tool_specs(), tool_choice="auto")
+                body.update(tools=tool_specs(), tool_choice="required")
             else:
                 body["response_format"] = {"type": "json_object"}
             r = requests.post("https://api.groq.com/openai/v1/chat/completions", json=body, timeout=120,
@@ -97,6 +97,9 @@ class LLM:
                         return as_agent_json(gen.get("name", ""), gen.get("arguments", {})), 0
                     except (json.JSONDecodeError, AttributeError):
                         pass
+                if err.get("code") in ("tool_use_failed", "output_parse_failed"):   # empty or unparseable generation: nudge and retry
+                    messages = messages + [{"role": "user", "content": "Reply only by calling one of the provided tools. Call final_answer once you have enough evidence."}]
+                    continue
                 if self.native_tools and "tool" in r.text.lower() and err.get("code") != "tool_use_failed":
                     self.native_tools = False               # model without tool support: plain JSON replies
                     continue
