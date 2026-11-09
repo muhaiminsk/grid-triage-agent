@@ -2,6 +2,7 @@
 
 An LLM agent that investigates failed and held **HTCondor** batch jobs with read-only tools, names the cause, and
 proposes a fix. Two things make it trustworthy:
+<img width="1453" height="599" alt="Screenshot 2026-11-09 at 9 45 39 AM" src="https://github.com/user-attachments/assets/00566074-8103-4937-9c08-cefc978ced20" />
 
 - **Evidence-grounded:** every claim must cite the exact log line or job attribute it rests on. A validator rejects
   claims that cite lines that don't exist, lines the agent never read, or lines that don't say what the claim says.
